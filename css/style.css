@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ddd;
+  font-family: "Open Sans", sans-serif;
+}
+.warning_error {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.warning_error i {
+  margin-right: 3px;
+}
+.closeicon {
+  margin-top: 2px;
+  margin-left: 10px;
+  background-color: #f03434;
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+}
+/* Step - 1  */
+.step1,
+.step2,
+.step3,
+.step4 {
+  width: 450px;
+  height: 450px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 50px auto;
+
+  position: relative;
+}
+.step1__wrapper,
+.step2__wrapper,
+.step3__wrapper,
+.step4__wrapper {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+}
+.step1 h2,
+.step2_player1_name,
+.step3_player2_name {
+  margin-bottom: 25px;
+}
+.step1 .step1_input,
+.step2 .step2_input,
+.step3 .step3_input {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.step2 .step2_input::-webkit-inner-spin-button,
+.step3 #guess_number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.step1 .step1_input:focus,
+.step2 .step2_input:focus,
+.step3 .step3_input:focus {
+  outline: none;
+}
+.step1 .step1_input::placeholder,
+.step2 .step2_input::placeholder,
+.step3 .step3_input::placeholder {
+  font-weight: 500;
+  color: #d9d9d9;
+}
+.step1_input_group,
+.step2_input_group,
+.step3_input_group {
+  text-align: left;
+}
+.step1_notify,
+.step2_notify,
+.step3_notify {
+  color: #ddd;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 3px;
+  margin-left: 10px;
+}
+.step1 .step1_startbtn,
+.step2 .step2_playbtn,
+.step3 .step3_guessbtn {
+  margin: 15px auto;
+  text-align: center;
+  border: 1px solid #7041d3;
+  background-color: #7041d3;
+  border-radius: 30px;
+  padding: 12px 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Step - 2  */
+.step2 {
+  display: none;
+}
+.step3_player2_name {
+  cursor: pointer;
+  transition: linear 0.3s;
+}
+.step3_player2_name:focus {
+  outline: none;
+  border-bottom: 1px solid #ddd;
+}
+.step3_player2_name:focus i {
+  display: none;
+}
+/* Step - 3 */
+.step3 {
+  display: none;
+}
+.chance_wrapper {
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+/* Cowndown Timer  */
+.cowndown_timer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.step4 {
+  display: none;
+}

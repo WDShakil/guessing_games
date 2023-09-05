@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Remix icon cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Font  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ====== Step 1 ====== -->
+    <div class="step1">
+      <div class="step1__wrapper">
+        <h2>Wanna Play game?</h2>
+        <div class="step1_input_group">
+          <input
+            placeholder="What is your name"
+            class="step1_input"
+            type="text"
+            id="name"
+          />
+          <label for="name" class="step1_notify">
+            Type Your Name And Press Enter</label
+          >
+        </div>
+        <button class="step1_startbtn">Start Game</button>
+      </div>
+    </div>
+    <!-- ====== Step 2 ====== -->
+    <div class="step2">
+      <div class="step2__wrapper">
+        <h2 class="step2_player1_name">Syed Shakil</h2>
+        <div class="step2_input_group">
+          <input
+            placeholder="Give Your Number (1-9)"
+            class="step2_input"
+            type="number"
+            id="first_number"
+            autofocus
+            min="1"
+            step="2"
+            max="9"
+            oninput="this.value = this.value.slice(0, 1)"
+          />
+          <label for="first_number" class="step2_notify">
+            Enter Your Challange Number</label
+          >
+        </div>
+        <button class="step2_playbtn">Let’s Play</button>
+      </div>
+    </div>
+    <!-- ====== Step3 ====== -->
+    <div class="step3">
+      <div class="step3__wrapper">
+        <h2
+          class="step3_player2_name"
+          spellcheck="false"
+          contenteditable="true"
+        >
+          Player 2<i class="ri-pencil-line"></i>
+        </h2>
+        <div class="chance_wrapper">
+          <h3>Chance : <span class="chances"></span></h3>
+        </div>
+        <div class="step3_input_group">
+          <input
+            placeholder="Give Your Number (1-9)"
+            class="step3_input"
+            type="number"
+            autofocus
+            min="1"
+            step="2"
+            max="9"
+            oninput="this.value = this.value.slice(0, 1)"
+            id="guess_number"
+          />
+          <label for="guess_number" class="step3_notify">
+            Give Your Guessing Number</label
+          >
+        </div>
+        <button class="step3_guessbtn">Let’s Play</button>
+      </div>
+      <div class="cowndown_timer">
+        <span class="cowndown">0 : 30</span>
+      </div>
+    </div>
+    <!-- ====== Step4 ====== -->
+    <div class="step4">
+      <div class="step4__wrapper">
+        <h2 class="wining_result"></h2>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
